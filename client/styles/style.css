@@ -1,0 +1,19 @@
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: black;
+  margin-left: 80px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main {
+  left: 35%;
+  top: 30%;
+  width: 350px;
+  height: 470px;
+  position: absolute;
+}
