@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>core-animated-pages</title>
+  <title>Get to know me</title>
 
   <script src="lib/platform/platform.js"></script>
   <link href="lib/core-animated-pages/core-animated-pages.html" rel="import">
+  <link rel="import" href="lib/core-item/core-item.html">
 
   <style>
     body {
@@ -19,7 +20,8 @@
       right: 0;
       left: 0;
       height: 350px;
-      background: #70c26f;
+      /*background: #70c26f;*/
+      background: url('img/creative-mind.jpg');
     }
   </style>
 </head>
@@ -51,6 +53,7 @@
       .chip-top {
         width: 200px;
         height: 200px;
+        background: url('img/Aquicon-Github.jpg');
       }
 
       .chip-bottom {
@@ -60,6 +63,9 @@
 
       .chip-album-title {
         font-weight: bold;
+      }
+      .chip-artist {
+        color: white;
       }
 
       #details {
@@ -88,6 +94,7 @@
         width: 60px;
         height: 60px;
         margin-right: 16px;
+        background: url('img/Aquicon-Github.jpg');
       }
 
       .card-album-title {
@@ -130,6 +137,9 @@
                 <div class="card-album-artist">{{selectedAlbum.artist}}</div>
               </div>
             </div>
+            <core-item label="Github"></core-item>
+            <core-item label="Twitter"></core-item>
+            <core-item label="Angel List"></core-item>
           </div>
         </div>
 
@@ -145,10 +155,10 @@
       page: 0,
 
       items: [
-        { artist: 'Tycho', album: 'Fragments', color: '#f4db33' },
-        { artist: 'Tycho', album: 'Past Prologue', color: '#972ff8' },
-        { artist: 'Tycho', album: 'Spectre', color: '#7dd6fe' },
-        { artist: 'Tycho', album: 'Awake', color: '#dc3c84' }
+        { artist: 'Tycho', album: 'Contact Me', color: '#f4db33' },
+        { artist: 'Tycho', album: 'Recent Projects', color: '#972ff8' },
+        { artist: 'Tycho', album: 'About Me', color: '#7dd6fe' },
+        { artist: 'Tycho', album: 'Resume', color: '#dc3c84' }
       ],
 
       selectedAlbum: null,
@@ -160,7 +170,12 @@
         } else {
           this.page = 0;
         }
-      }
+      },
+      socialMedia: [
+      {name: "LinkedIn"},
+      {name: "Twitter"},
+      {name: "Angel List"}
+      ]
     });
 
   </script>
