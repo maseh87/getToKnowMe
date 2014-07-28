@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Get to know me</title>
-
-  <script src="lib/platform/platform.js"></script>
-  <link href="lib/core-animated-pages/core-animated-pages.html" rel="import">
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap-css-only/css/bootstrap.css">
-  <!-- <link rel="import" href="app/elements/musicDemo.html"> -->
-  <!-- <link rel="import" href="app/elements/resume.html"> -->¡
-  <link rel="import" href="lib/core-menu/core-menu.html">
-  <link rel="import" href="lib/paper-item/paper-item.html">
-
-  <style>
-    body {
-      font-family: 'Roboto 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      background: #f1f1f1;
-    }
-
-    .green {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 350px;
-      /*background: #70c26f;*/
-      background: url('img/creative-mind.jpg');
-    }
-  </style>
-</head>
-<body>
-
-  <polymer-element name="music-demo">
+<polymer-element name="my-resume">
   <template>
 
-    <style>
+    <!-- <style>
       .chip-container {
         position: absolute;
         top: 275px;
@@ -104,7 +71,7 @@
       .card-album-title {
         font-size: 2em;
       }
-    </style>
+    </style> -->
 
     <core-animated-pages selected="{{page}}" transitions="hero-transition" on-core-animated-pages-transition-end="{{complete}}">
 
@@ -157,23 +124,23 @@
   </template>
   <script>
 
-    Polymer('music-demo', {
+    Polymer('my-resume', {
 
       page: 0,
 
       items: [
-        { view: 1,
-          artist: 'Contact',
-          color: '#f4db33',
-          title: 'Contact Me',
-          twitter: "Twitter",
-          angel: "Angel List",
-          git: "Github",
-          email: "Email"
-        },
+        // { view: 1,
+        //   artist: 'Contact',
+        //   color: '#f4db33',
+        //   title: 'Contact Me',
+        //   twitter: "Twitter",
+        //   angel: "Angel List",
+        //   git: "Github",
+        //   email: "Email"
+        // },
         { view: 2, artist: 'Projects', title: 'Recent Projects', color: '#972ff8' },
-        { view: 3, artist: 'Resume', title: 'Resume', color: '#7dd6fe' },
-        { view: 4, artist: 'About', title: 'About Me', color: '#dc3c84' }
+        // { view: 3, artist: 'Resume', title: 'Resume', color: '#7dd6fe' },
+        // { view: 4, artist: 'About', title: 'About Me', color: '#dc3c84' }
       ],
 
       selectedAlbum: null,
@@ -196,13 +163,3 @@
 
   </script>
   </polymer-element>
-
-  <div class="green"></div>
-  <div class="row">
-    <music-demo ></music-demo>
-  </div>
-  <div class="row">
-    <my-resume class="col col-md-6"></my-resume>
-  </div>
-</body>
-</html>
